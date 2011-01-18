@@ -1,0 +1,22 @@
+[russianfedora-nonfree]
+name=Russian Fedora for Fedora $releasever - Nonfree
+#baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/$releasever/Everything/$basearch/os
+mirrorlist=http://mirrors.rfremix.ru/mirrorlist?repo=nonfree-fedora-$releasever&arch=$basearch
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-nonfree-fedora
+
+[russianfedora-nonfree-debuginfo]
+name=Russian Fedora for Fedora $releasever - Nonfree - Debug
+baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/$releasever/Everything/$basearch/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-nonfree-fedora
+
+[russianfedora-nonfree-source]
+name=Russian Fedora for Fedora $releasever - Nonfree - Source
+baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/$releasever/Everything/source/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-nonfree-fedora
+
