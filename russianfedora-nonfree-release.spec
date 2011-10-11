@@ -97,5 +97,5 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Tue Oct 11 Arkady L. Shane <ashejn@yandex-team.ru> - 6-1.R
+* Tue Oct 11 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 6-1.R
 - initial build for EL
