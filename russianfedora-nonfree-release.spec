@@ -3,7 +3,7 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        16
+Version:        6
 Release:        1.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
@@ -14,7 +14,6 @@ Source0:        RPM-GPG-KEY-russianfedora-%{repo}-fedora
 Source1:        russianfedora-%{repo}.repo
 Source2:        russianfedora-%{repo}-updates.repo
 Source3:        russianfedora-%{repo}-updates-testing.repo
-Source4:        russianfedora-%{repo}-rawhide.repo
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
@@ -77,7 +76,7 @@ install -d -m755 \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg
 
 # Yum .repo files
-%{__install} -p -m644 %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} \
+%{__install} -p -m644 %{SOURCE1} %{SOURCE2} %{SOURCE3} \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 
@@ -98,30 +97,5 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Sun Sep 18 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 16-1.R
-- update to RFRemix 16
-
-* Fri Mar 18 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 15-1
-- update to RFRemix 15
-
-* Thu Oct 14 2010 Arkady L. Shane <ashejn@yandex-team.ru> - 14-1
-- stable release
-
-* Wed May 19 2010 Arkady L. Shane <ashejn@yandex-team.ru> - 13-1
-- enable stable repos disable unstable
-
-* Mon Mar 15 2010 Arkady L. Shane <ashejn@yandex-team.ru> - 13-0.1
-- bump to 13
-
-* Mon Nov  9 2009 Arkady L. Shane <ashejn@yandex-team.ru> - 12-2
-- fix updates repo
-
-* Mon Nov  9 2009 Arkady L. Shane <ashejn@yandex-team.ru> - 12-1
-- update for RFRemix 12
-
-* Sun Jan 11 2009 Arkady L. Shane <ashejn@yandex-team.ru> - 10-2
-- add obsoletes for tigro-release
-- fix repos files
-
-* Fri Jan  9 2009 Arkady L. Shane <ashejn@yandex-team.ru> - 10-1
-- initial build for Fedora 10
+* Tue Oct 11 Arkady L. Shane <ashejn@yandex-team.ru> - 6-1.R
+- initial build for EL
