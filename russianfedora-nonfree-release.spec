@@ -3,8 +3,8 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        16
-Release:        1.R
+Version:        17
+Release:        0.1.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -98,6 +98,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Dec  7 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 17-0.1.R
+- rawhide stuff
+
 * Sun Sep 18 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 16-1.R
 - update to RFRemix 16
 
