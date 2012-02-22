@@ -4,7 +4,7 @@
 
 Name:           russianfedora-%{repo}-release
 Version:        6
-Release:        1.R
+Release:        3.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -17,7 +17,7 @@ Source3:        russianfedora-%{repo}-updates-testing.repo
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
-Requires:       system-release >= %{version}
+Requires:       redhat-release >= %{version}
 
 # If apt is around, it needs to be a version with repomd support
 Conflicts:      apt < 0.5.15lorg3
@@ -97,5 +97,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Feb 22 2012 Arkady L. Shane <ashejn@yandex-team.ru> - 6-2.R
+- R: redhat-release, CentOS does not provide system-release
+
 * Tue Oct 11 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 6-1.R
 - initial build for EL
