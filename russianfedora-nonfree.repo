@@ -8,14 +8,16 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-nonfree-fedora
 
 [russianfedora-nonfree-debuginfo]
 name=Russian Fedora for Fedora $releasever - Nonfree - Debug
-baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/$releasever/Everything/$basearch/debug
+#baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/$releasever/Everything/$basearch/debug
+mirrorlist=http://mirrors.rfremix.ru/mirrorlist?repo=nonfree-fedora-debug-$releasever&arch=$basearch
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-nonfree-fedora
 
 [russianfedora-nonfree-source]
 name=Russian Fedora for Fedora $releasever - Nonfree - Source
-baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/$releasever/Everything/source/SRPMS
+#baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/releases/$releasever/Everything/source/SRPMS
+mirrorlist=http://mirrors.rfremix.ru/mirrorlist?repo=fixes-fedora-source-$releasever&arch=$basearch
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-nonfree-fedora

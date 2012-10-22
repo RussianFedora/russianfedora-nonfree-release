@@ -4,7 +4,7 @@
 
 Name:           russianfedora-%{repo}-release
 Version:        18
-Release:        1.R
+Release:        2.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -98,6 +98,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Oct 22 2012 Arkady L. Shane <ashejn@yandex-team.ru> - 18-2.R
+- added debug and source mirrorlist url
+
 * Wed Oct  2 2012 Arkady L. Shane <ashejn@yandex-team.ru> - 18-1.R
 - update to RFRemix 18
 
