@@ -3,7 +3,7 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        17
+Version:        21
 Release:        0.1.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
@@ -98,6 +98,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Mar  4 2014 Arkady L. Shane <ashejn@russianfedora.ru> - 21-0.1.R
+- bump release
+
 * Wed Dec  7 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 17-0.1.R
 - rawhide stuff
 
