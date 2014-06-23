@@ -4,7 +4,7 @@
 
 Name:           russianfedora-%{repo}-release
 Version:        20
-Release:        1.R
+Release:        2.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -15,8 +15,12 @@ Source1:        russianfedora-%{repo}.repo
 Source2:        russianfedora-%{repo}-updates.repo
 Source3:        russianfedora-%{repo}-updates-testing.repo
 Source4:        russianfedora-%{repo}-rawhide.repo
+Source5:        russianfedora-20-nonfree.xml.gz
+Source6:        russianfedora-20-nonfree-icons.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
+
+BuildRequires:  libappstream-glib
 
 Requires:       system-release >= %{version}
 
@@ -80,6 +84,8 @@ install -d -m755 \
 %{__install} -p -m644 %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
+# AppStream metadata
+DESTDIR=%{buildroot} appstream-util install %{SOURCE5} %{SOURCE6}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -95,9 +101,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %{_sysconfdir}/pki/rpm-gpg/*
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
-
+%attr(0644,root,root) %{_datadir}/app-info/xmls/*
+%{_datadir}/app-info/icons/russianfedora-%{version}-nonfree/*.png
 
 %changelog
+* Mon Jun 23 2014 Igor Gnatenko <i.gnatenko.brain@gmail.com> - 20-2.R
+- include appstream metadata
+
 * Fri Oct  4 2013 Arkady L. Shane <ashejn@yandex-team.ru> - 20-1.R
 - update to RFRemix 20
 
