@@ -3,8 +3,8 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        20
-Release:        2.R
+Version:        21
+Release:        1.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -105,6 +105,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/app-info/icons/russianfedora-%{version}-nonfree/*.png
 
 %changelog
+* Tue Sep  2 2014 Arkady L. Shane <ashejn@russianfedora.ru> - 21-1.R
+- update to RFRemix 21
+
 * Mon Jun 23 2014 Igor Gnatenko <i.gnatenko.brain@gmail.com> - 20-2.R
 - include appstream metadata
 
