@@ -15,8 +15,8 @@ Source1:        russianfedora-%{repo}.repo
 Source2:        russianfedora-%{repo}-updates.repo
 Source3:        russianfedora-%{repo}-updates-testing.repo
 Source4:        russianfedora-%{repo}-rawhide.repo
-Source5:        russianfedora-20-nonfree.xml.gz
-Source6:        russianfedora-20-nonfree-icons.tar.gz
+Source5:        russianfedora-%{version}-nonfree.xml.gz
+Source6:        russianfedora-%{version}-nonfree-icons.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
