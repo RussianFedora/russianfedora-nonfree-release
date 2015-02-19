@@ -3,7 +3,7 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        21
+Version:        23
 Release:        0.1.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
@@ -15,8 +15,12 @@ Source1:        russianfedora-%{repo}.repo
 Source2:        russianfedora-%{repo}-updates.repo
 Source3:        russianfedora-%{repo}-updates-testing.repo
 Source4:        russianfedora-%{repo}-rawhide.repo
+Source5:        russianfedora-%{version}-nonfree.xml.gz
+Source6:        russianfedora-%{version}-nonfree-icons.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
+
+BuildRequires:  libappstream-glib
 
 Requires:       system-release >= %{version}
 
@@ -80,6 +84,8 @@ install -d -m755 \
 %{__install} -p -m644 %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
+# AppStream metadata
+DESTDIR=%{buildroot} appstream-util install %{SOURCE5} %{SOURCE6}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -95,9 +101,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %{_sysconfdir}/pki/rpm-gpg/*
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
+%attr(0644,root,root) %{_datadir}/app-info/xmls/*
+%{_datadir}/app-info/icons/russianfedora-%{version}-nonfree/*.png
 
 
 %changelog
+* Thu Feb 19 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 23-0.1.R
+- update for new Rawhide
+
 * Tue Mar  4 2014 Arkady L. Shane <ashejn@russianfedora.ru> - 21-0.1.R
 - bump release
 
