@@ -3,7 +3,7 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        21
+Version:        22
 Release:        1.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
@@ -105,6 +105,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/app-info/icons/russianfedora-%{version}-nonfree/*.png
 
 %changelog
+* Thu Feb 19 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 22-1.R
+- update to RFRemix 22
+
 * Tue Sep  2 2014 Arkady L. Shane <ashejn@russianfedora.ru> - 21-1.R
 - update to RFRemix 21
 
