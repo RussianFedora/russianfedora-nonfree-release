@@ -106,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Mon Feb 29 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 25-0.1.R
+* Mon Feb 29 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 25-0.1.R
 - update for new Rawhide
 
 * Tue Jul 21 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 24-0.1.R
