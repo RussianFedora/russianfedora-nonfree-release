@@ -4,7 +4,7 @@
 
 Name:           russianfedora-%{repo}-release
 Version:        24
-Release:        1.R
+Release:        2.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -105,6 +105,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/app-info/icons/russianfedora-%{version}-nonfree/*.png
 
 %changelog
+* Mon Jun  6 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 24-2.R
+- fix version in russianfedora-24-nonfree.xml
+- added sublime
+
 * Mon Feb 29 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 24-1.R
 - update to RFRemix 24
 
