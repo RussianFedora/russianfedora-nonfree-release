@@ -4,7 +4,7 @@
 
 Name:           russianfedora-%{repo}-release
 Version:        25
-Release:        0.2.R
+Release:        1
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -106,6 +106,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Aug  2 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 25-1
+- update for RFRemix 25
+
 * Mon Jun  6 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 25-0.2.R
 - fix version in russianfedora-25-nonfree.xml
 - added sublime
