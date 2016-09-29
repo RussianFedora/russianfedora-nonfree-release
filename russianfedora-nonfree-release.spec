@@ -4,7 +4,7 @@
 
 Name:           russianfedora-%{repo}-release
 Version:        25
-Release:        1
+Release:        2
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -106,6 +106,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Sep 29 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 25-2
+- disable rawhide
+
 * Tue Aug  2 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 25-1
 - update for RFRemix 25
 
