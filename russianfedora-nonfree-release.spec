@@ -106,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Wed Mar  1 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 26-1
+* Wed Mar  1 2017 Arkady L. Shane <ashejn@russianfedora.ru> - 26-1
 - update for RFRemix 26
 
 * Thu Sep 29 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 25-2
