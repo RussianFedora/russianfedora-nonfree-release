@@ -3,8 +3,8 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        6
-Release:        3.R
+Version:        7
+Release:        1.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -16,8 +16,6 @@ Source2:        russianfedora-%{repo}-updates.repo
 Source3:        russianfedora-%{repo}-updates-testing.repo
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
-
-Requires:       redhat-release >= %{version}
 
 # If apt is around, it needs to be a version with repomd support
 Conflicts:      apt < 0.5.15lorg3
@@ -64,7 +62,6 @@ echo "Nothing to prep"
 echo "Nothing to build"
 
 %install
-rm -rf $RPM_BUILD_ROOT
 
 # Create dirs
 install -d -m755 \
@@ -80,16 +77,6 @@ install -d -m755 \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-
-#%pre
-#if [ -f /etc/yum.repos.d/russianfedora-%{repo}-pre-rawhide.repo ]; then
-#    sed -i 's!enabled=1!enabled=0!g' /etc/yum.repos.d/russianfedora-%{repo}-pre-rawhide.repo
-#fi
-
-
 %files
 %defattr(-,root,root,-)
 %{_sysconfdir}/pki/rpm-gpg/*
@@ -97,6 +84,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Aug 17 2017 Arkady L. Shane <ashejn@yandex-team.ru> - 7-1.R
+- update to EL7
+
 * Wed Feb 22 2012 Arkady L. Shane <ashejn@yandex-team.ru> - 6-2.R
 - R: redhat-release, CentOS does not provide system-release
 
