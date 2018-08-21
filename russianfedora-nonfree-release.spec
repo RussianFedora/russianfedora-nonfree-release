@@ -109,7 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 * Tue Aug 21 2018 Arkady L. Shane <ashejn@russianfedora.ru> - 29-1
 - update for RFRemix 29
 
-* Tue Sep 27 2018 Arkady L. Shane <ashejn@russianfedora.ru> - 28-1
+* Tue Sep 27 2017 Arkady L. Shane <ashejn@russianfedora.ru> - 28-1
 - update for RFRemix 28
 
 * Mon Aug 28 2017 Arkady L. Shane <ashejn@russianfedora.ru> - 27-1
