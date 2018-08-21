@@ -3,7 +3,7 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        28
+Version:        29
 Release:        1
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
@@ -106,6 +106,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Aug 21 2018 Arkady L. Shane <ashejn@russianfedora.ru> - 29-1
+- update for RFRemix 29
+
 * Tue Sep 27 2018 Arkady L. Shane <ashejn@russianfedora.ru> - 28-1
 - update for RFRemix 28
 
